@@ -1,0 +1,9 @@
+<h1>Agenda de contatos</h1>
+<a href="./add">Novo Contato</a>
+<ul>
+    <?php foreach($lista as $item): ?>
+    <li><?= utf8_encode($item['nome']) ?> - <?= $item['telefone'] ?> 
+    | <a href="/edit/<?= $item['id'] ?>">Editar</a> 
+    | <a href="/del/<?= $item['id'] ?>">Remover</a></li>
+    <?php endforeach; ?>
+</ul>
